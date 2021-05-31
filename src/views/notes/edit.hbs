@@ -1,0 +1,30 @@
+{{#each errors }}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/each }}
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">Editar nota</div>
+        <div class="card-body">
+            <form action="/notes/update/{{dataNote._id}}?_method=PUT" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="form-group">
+                    <input name="title" type="text" class="form-control" placeholder="Título" autofocus value="{{dataNote.title}}">
+                </div>
+                <div class="form-group mt-2">
+                    <textarea name="description" class="form-control" placeholder="Descripción">{{dataNote.description}}</textarea>
+                </div>
+                <div class="form-group mt-2 d-grid">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            <form action="/notes" method="GET">
+                <div class="form-group mt-2 d-grid">
+                    <button type="submit" class="btn btn-secondary" >Volver</button>
+                </div>
+            </form>
+            </form>
+        </div>
+    </div>
+</div>

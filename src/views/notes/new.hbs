@@ -1,0 +1,23 @@
+<div class="col-md-4 mx-auto">
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">Nueva nota</div>
+        <div class="card-body">
+            <form action="/notes/create" method="POST">
+                <div class="form-group">
+                    <input name="title" type="text" class="form-control" placeholder="Título" autofocus>
+                </div>
+                <div class="form-group mt-2">
+                    <textarea name="description" class="form-control" placeholder="Descripción"></textarea>
+                </div>
+                <div class="form-group mt-2 d-grid">
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </div>
+            </form>
+            <form action="/notes" method="GET">
+                <div class="form-group mt-2 d-grid">
+                    <button type="submit" class="btn btn-secondary" >Volver</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

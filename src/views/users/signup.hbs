@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 mt-4">
+        <div class="card border-info">
+            <div class="card-header bg-primary text-white text-center">Registro</div>
+            <div class="card-body">
+                <form action="/users/signup" method="POST">
+                    <div class="form-group mt-4">
+                        <input type="text" class="form-control" placeholder="Nombre" name="name" autofocus value="{{name}}">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="email" class="form-control" placeholder="E-mail" name="email" value="{{email}}">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password" value="{{password}}">
+                    </div>
+                    <div class="form-group mt-2">
+                        <input type="password" class="form-control" placeholder="Repetir contraseña" name="confirm_password" value="{{confirm_password}}">
+                    </div>
+                    <div class="form-group mt-4 d-grid">
+                        <button type="submit" class="btn btn-success btn-block">Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
